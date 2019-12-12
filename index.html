@@ -1,48 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Knights</title>
-  <link rel="icon" href="images/knight.png" type="image/x-icon">
+<meta charset="utf-8">
+<title>HTML Div Layout</title>
 <style>
-body {
-  background-image: url('images/bubbles.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;
-}
-a:link, a:visited {
-  color: white;
-  text-decoration: none;
-}
-a:hover {
-  color: yellow;
-  text-decoration: none;
-}
+    body {
+        font: 14px Arial,sans-serif; 
+        margin: 0px;
+    }
+    .header {
+        padding: 10px 20px;
+        background: #acb3b9; 
+    }
+    .header h1 {
+        font-size: 24px;
+    }
+    .container {
+        width: 100%;
+        background: #f2f2f2; 
+    }
+    .nav, .section {
+        float: left; 
+        padding: 20px;
+        min-height: 170px;
+        box-sizing: border-box;
+    }
+    .nav {            
+        width: 20%;             
+        background: #d4d7dc;
+    }
+    .section {
+        width: 80%;
+    }
+    .nav ul {
+        list-style: none; 
+        line-height: 24px;
+        padding: 0px; 
+    }
+    .nav ul li a {
+        color: #333;
+    }    
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    .footer {
+        background: #acb3b9;            
+        text-align: center;
+        padding: 5px;
+    }
 </style>
 </head>
 <body>
-  <center>
-  <font color="white">
-  <h1>Computer Science Website</h1>
-  <p><b>Class Links: &emsp;</b>
-    <a href="https://b.socrative.com/login/student" target="_self">Bell Ringer</a> &ensp;
-    <a href="https://appinventor.mit.edu" target="_self">App Inventor</a> &ensp;
-    <br><b>Search Engines: &emsp;</b>
-    <a href="https://www.bing.com" target="_self">Bing</a> &ensp;
-    <a href="https://www.yahoo.com" target="_self">Yahoo</a> &ensp;
-    <a href="https://www.webcrawler.com" target="_self">Webcrawler</a> &ensp;
-    <br><b>Daily Objective: &emsp;</b>
-    <a href="tasks/task2">Period 2</a> &ensp;
-    <a href="">Period 3</a> &ensp;
-    <a href="">Period 4</a> &ensp;
-    <br><b>Final Exams: &emsp;</b>
-    <a href="https://docs.google.com/forms/d/1wsGVGVc404ma7V15yRnKR1i8wr03-b5YAkbN1WX0OQY">CSE Final</a> &ensp;
-    <a href="https://docs.google.com/forms/d/1KSmcpmy6O275-mry7Xz7CD9BLVLoSuso__hNc8Lx4-g">CSP Final</a> &ensp;
-    <a href="https://docs.google.com/forms/d/1JJf4gx-LJAM4eLF4H5Fdobwl-LPaEm5J_QBy6cOqGw0">CSA Final</a> &ensp;
-  </p>
-  Bell Ringer Room Name: PROGRAMMERS <br>
-  </font>
-  <font color="red">Warning! Last name, First Name </font>
-  </center>
+    <div class="container">
+        <div class="header">
+            <h1>Bullard Computer Science</h1>
+        </div>
+        <div class="wrapper clearfix">
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Welcome to our site</h2>
+                <p>Here you will learn how to create websites...</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>copyright &copy; 2019</p>
+        </div>
+    </div>
 </body>
-</html>
+</html>                            
