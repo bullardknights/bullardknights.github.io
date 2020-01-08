@@ -12,7 +12,7 @@
 <p style=line-height:75%>
 Objective: &ensp;
 <font size=6>
-By the end of the lesson, you will be able to create a short story to code using Python.
+By the end of the lesson, you will be able to code the game of concentration using 2D arrays.
 </p>
 <font size=8>
 Need Help:&ensp;
@@ -42,11 +42,11 @@ document.getElementById("calendar").innerHTML=date2+"&emsp;";
 var day = today.getDay();
 // var day = "class";
   
-var bellTime = new Date(date+" 09:08:00").getTime();
-var wrapTime = new Date(date+" 10:03:00").getTime();
+var bellTime = new Date(date+" 12:50:00").getTime()+(5*60*1000); //11:02,11:15
+var wrapTime = new Date(date+" 13:47:00").getTime(); //11:50,12:06
 if (day==1) {
-  var bellTime = new Date(date+" 09:04:00").getTime();
-  var wrapTime = new Date(date+" 09:57:00").getTime();
+  var bellTime = new Date(date+" 12:36:00").getTime()+(5*60*1000); //11:02,11:15
+  var wrapTime = new Date(date+" 13:29:00").getTime(); //11:50,12:06
 }
 // Special Schedule like finals schedule, etc.
 if (day=="class") {
@@ -84,7 +84,7 @@ var Timer = setInterval(function() {
 
 <br><br>
 <font size=8><font color="white">
-Tasks (Act. 3.1.1a)
+Tasks (Act. 4.1.2)
 <font size=6>
 <ol>
   <li>
@@ -97,7 +97,7 @@ Open the PLTW Instructional Guide (In Seats, Voice: 0)
 Complete the Assignment using the Guide (In Seats, Voice: 2)
   </li>
   <li>
-Submit Work in Teams by 1 pm on Wednesday, Dec 11. (In Seats, Voice: 0)
+Submit Work on Edmodo (In Seats, Voice: 0)
   </li>
   <li>
 Wrap Up (Logout & Sit for Dismissal, Voice: 0) <span id="wrap" style="color:yellow"></span>
