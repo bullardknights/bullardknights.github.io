@@ -42,11 +42,11 @@ document.getElementById("calendar").innerHTML=date2+"&emsp;";
 var day = today.getDay();
 // var day = "class";
   
-var bellTime = new Date(date+" 11:12:00").getTime()+(5*60*1000);
-var wrapTime = new Date(date+" 12:09:00").getTime();
+var bellTime = new Date(date+" 11:10:00").getTime()+(5*60*1000);
+var wrapTime = new Date(date+" 12:06:00").getTime();
 if (day==1) {
-  var bellTime = new Date(date+" 11:02:00").getTime()+(5*60*1000);
-  var wrapTime = new Date(date+" 11:55:00").getTime();
+  var bellTime = new Date(date+" 11:00:00").getTime()+(5*60*1000);
+  var wrapTime = new Date(date+" 11:52:00").getTime();
 }
 // Special Schedule like finals schedule, etc.
 if (day=="class") {
