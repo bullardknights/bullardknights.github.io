@@ -50,7 +50,7 @@ if (day==1) {
 }
 // Special Schedule like finals schedule, etc.
 if (day=="class") {
-  var bellTime = new Date(date+" 08:59:00").getTime();
+  var bellTime = new Date(date+" 08:59:00").getTime()+(5*60*1000);
   var wrapTime = new Date(date+" 09:55:00").getTime();
 }
 var Timer = setInterval(function() {
