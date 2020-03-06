@@ -39,8 +39,8 @@ var now = new Date().getTime();
 document.getElementById("calendar").innerHTML=date2+"&emsp;";
   
 // day override
-// var day = today.getDay();
-var day = "class";
+var day = today.getDay();
+// var day = "class";
   
 var bellTime = new Date(date+" 10:08:00").getTime()+(5*60*1000);
 var wrapTime = new Date(date+" 11:04:00").getTime();
