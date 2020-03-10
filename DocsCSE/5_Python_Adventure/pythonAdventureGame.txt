@@ -1,0 +1,35 @@
+Python Adventure Game
+
+Show mastery of the following Python commands:
+
+ 1. screen display
+ 2. user input
+ 3. concatenation of strings
+ 4. slicing strings
+ 5. lists
+ 6. dictionary keys
+ 7. dictionary values
+ 8. dictionary 
+ 9. arrays
+10. indexes
+11. conditionals
+12. functions without returns
+13. functions with returns
+14. global variables
+15. local variables
+16. integer ranges
+17. booleans
+18. for loop
+19. for each loop
+20. while loop
+21. keyword: in
+22. objects without parameters
+23. objects with parameters
+24. object attributes
+25. object methods
+26. object __init__
+27. object __str__
+28. object __repr__
+29. class variable
+30. object variable
+
