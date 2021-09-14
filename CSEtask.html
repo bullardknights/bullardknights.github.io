@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Knights Task 2</title>
+  <link rel="icon" href="imgTasks/knight.png" type="image/x-icon">
+</head>
+<body>
+<body style="background-image: url('imgTasks/bubbles.jpg'); background-size: cover;">
+<font color="white"><b>
+<font size=8>
+<p id="calendar" style="color:yellow"></p>
+<p style=line-height:75%>
+Objective: &ensp;
+<font size=6>
+By the end of the lesson, you will be able to utilize object-oriented programming to <i>create an Adventure Game</i> in Python (CSE 3.2).
+</p>
+<font size=8>
+Need Help:&ensp;
+<font size=6> 
+1. Ask elbow partners &ensp; 
+2. Check Bing or Yahoo! &ensp; 
+3. Go to Teacher
+<font size=6>
+<!-- Display the countdown timer in an element -->
+<font color="yellow"><font size=6><b>
+</b></font>
+  
+<script>
+// Set the date we're counting down to
+var today=new Date();
+var day = today.getDay();
+var monthNames=["January","February","March","April","May","June",
+	"July","August","September","October","November","December"];
+var dayNames=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var date2 = dayNames[day]+", "+monthNames[today.getMonth()]+" "+today.getDate()+", "+today.getFullYear();
+var now = new Date().getTime();
+  
+document.getElementById("calendar").innerHTML=date2+"&emsp;";
+  
+// day override
+var day = today.getDay();
+// var day = "class";
+  
+var bellTime = new Date(date+" 09:02:00").getTime()+(5*60*1000);
+var wrapTime = new Date(date+" 10:02:00").getTime();
+if (day==1) {
+  var bellTime = new Date(date+" 08:58:00").getTime()+(5*60*1000);
+  var wrapTime = new Date(date+" 09:56:00").getTime();
+}
+// Special Schedule like finals schedule, etc.
+if (day=="class") {
+  var bellTime = new Date(date+" 08:59:00").getTime()+(5*60*1000);
+  var wrapTime = new Date(date+" 09:55:00").getTime();
+}
+var Timer = setInterval(function() {
+  var now = new Date().getTime();
+// Bell Ringer Timing
+  var bellLeft = bellTime - now;
+  var bellDays = Math.floor(bellLeft / (1000 * 60 * 60 * 24));
+  var bellHours = Math.floor((bellLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var bellMinutes = Math.floor((bellLeft % (1000 * 60 * 60)) / (1000 * 60));
+  var bellSeconds = Math.floor((bellLeft % (1000 * 60)) / 1000);
+//Wrap Up Timing
+  var wrapLeft = wrapTime - now;
+  var wrapDays = Math.floor(wrapLeft / (1000 * 60 * 60 * 24));
+  var wrapHours = Math.floor((wrapLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var wrapMinutes = Math.floor((wrapLeft % (1000 * 60 * 60)) / (1000 * 60));
+  var wrapSeconds = Math.floor((wrapLeft % (1000 * 60)) / 1000);
+  
+  document.getElementById("bell").innerHTML="&emsp; Time Left: &ensp;"+bellHours+"h "+bellMinutes+"m "+bellSeconds+("s ");
+  document.getElementById("wrap").innerHTML="&emsp; Time Left: &ensp;"+wrapHours+"h "+wrapMinutes+"m "+wrapSeconds+("s ");
+  
+  if (bellLeft < 0) {
+    // clearInterval(bellTiming);
+    document.getElementById("bell").innerHTML="&emsp; Time Left: &ensp; EXPIRED";
+  }
+  if (wrapLeft < 0 ) {
+  	clearInterval(Timer);
+    document.getElementById("wrap").innerHTML="&emsp; Time Left: &ensp; EXPIRED";
+  }
+}, 1000);
+</script>
+
+<br><br>
+<font size=8><font color="white">
+Tasks (BHS Cell Phone Policy: <font color="salmon">RED<font color="white">)
+<font size=6>
+<ol>
+  <li>
+Bell Ringer (In Seats, Voice: 0) <span id="bell" style="color:yellow"></span>
+  </li>
+  <li>
+Open the PLTW Instructional Guide (In Seats, Voice: 0)
+  </li>
+  <li>
+Complete the Assignment using the Guide (In Seats, Voice: 1)
+  </li>
+  <li>
+Submit Work on Edmodo by Friday (In Seats, Voice: 0)
+  </li>
+  <li>
+Wrap Up (Logout & Sit for Dismissal, Voice: 0) <span id="wrap" style="color:yellow"></span>
+  </li>
+</ol>
+<b></font>
+</body>
+</html>
